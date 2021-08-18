@@ -1,3 +1,21 @@
+/* :root {
+  --primary: #ddfbd2;
+  --darker-primary: #bcedf6;
+  --secondary: #4c2a85;
+  --accent: #6b7fd7;
+  --light: #dadd00;
+  --transparent-bg: #320e3b;
+} */
+
+/* :root {
+  --primary: #BADA55;
+  --darker-primary: #0fe8aa;
+  --secondary: #1a0f0f;
+  --accent: #e8dee1;
+  --light: #f0544f;
+  --transparent-bg: #331832c6;
+} */
+
 :root {
   --primary: rgb(255, 239, 222);
   --darker-primary: rgb(235, 207, 177);
@@ -32,6 +50,7 @@ h5,
 h6 {
   font-family: "Roboto Slab", serif;
   line-height: normal;
+  overflow: hidden;
 }
 
 
@@ -102,7 +121,7 @@ h6 {
 .main {
   color: var(--secondary);
   background-color: var(--primary);
-  min-height: 72vh;
+  min-height: 74vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,7 +145,7 @@ h6 {
 
 .bgimg-1 {
   background-image: url("./components/assets/Masthead.png");
-  min-height: 74vh;
+  min-height: 75vh;
   position: relative;
   opacity: 0.85;
   background-position: center;
