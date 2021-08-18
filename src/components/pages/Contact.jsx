@@ -6,10 +6,10 @@ const Contact = () => {
     <div className="main">
       <div className="mainDiv">
         <div>
-          <h3>Send me an email- I'd love to have a conversation!</h3>
+          <h3 style={{textAlign: 'center'}}>Send me an email- I'd love to have a conversation!</h3>
           <br />
           <form action="https://formspree.io/f/xayabwea" method="POST" >
-            <FormGroup>
+            <FormGroup style={{display: 'flex', flexFlow: 'column wrap', alignItems: 'center'}}>
               <Label for="email">Email Address</Label>
               <Input
                 name="email"
@@ -28,7 +28,7 @@ const Contact = () => {
               />
             </FormGroup>
             <br />
-            <Button>Submit</Button>
+            <div style={{display: 'flex', flexFlow: 'column wrap', alignItems: 'center'}}><Button>Submit</Button></div>
           </form>
         </div>
       </div>

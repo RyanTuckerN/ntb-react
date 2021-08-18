@@ -53,7 +53,6 @@ h6 {
   overflow: hidden;
 }
 
-
 .navWrapper {
   /* background-color: var(--secondary); */
   background-color: rgba(0, 0, 0, 0.85);
@@ -105,7 +104,7 @@ h6 {
   /* font-family: monospace; */
 }
 
-.navTitle:hover{
+.navTitle:hover {
   transform: scale(1.1);
 }
 
@@ -158,6 +157,7 @@ h6 {
 .abtPhoto {
   max-width: 600px;
   max-height: 40%;
+  max-width: auto;
   border-radius: 100%;
 }
 /* RECORDINGS all inline */
@@ -180,6 +180,10 @@ tr:nth-of-type(odd) {
 }
 
 @media only screen and (max-width: 600px) {
+  .mainDiv {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
   /* Force table to not be like tables anymore */
   table,
   thead,
@@ -188,6 +192,13 @@ tr:nth-of-type(odd) {
   td,
   tr {
     display: block;
+  }
+
+  tr,
+  td,
+  th {
+    padding: 0.15rem;
+    overflow: hidden;
   }
 
   /* Hide table headers (but not display: none;, for accessibility) */
