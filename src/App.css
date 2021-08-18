@@ -1,5 +1,6 @@
 :root {
   --primary: rgb(255, 239, 222);
+  --darker-primary: rgb(235, 207, 177);
   --secondary: rgb(92, 0, 0);
   --accent: rgb(167, 94, 94);
   --light: rgb(218, 92, 70);
@@ -11,22 +12,15 @@ html {
   padding: 5px;
 }
 
-.abtPhoto {
-  max-width: 500px;
-  max-height: 40%;
-  border-radius: 50%;
-}
-
 * {
   transition: 0.2s;
-  font-family: "Fira Code";
+  font-family: "Fira Sans", sans-serif;
   overflow-x: hidden;
   box-sizing: border-box;
   /* border-radius: 10px; */
-  
 }
 
-.App{
+.App {
   background-color: var(--transparent-bg);
 }
 
@@ -36,8 +30,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: serif;
+  font-family: "Roboto Slab", serif;
+  line-height: normal;
 }
+
 
 .navWrapper {
   /* background-color: var(--secondary); */
@@ -68,20 +64,30 @@ h6 {
   text-decoration: none;
 }
 
-.navbar a:hover {
-  color: var(--light)
-  /* text-decoration: underline; */
+.navbar a:hover,
+.navTitle:hover {
+  color: var(--light);
+  /* transform: scale(1.1); */
 }
 
 .navbar button {
   margin-left: 5%;
 }
 
-.navTitle {
+.navTitle,
+.navTitleHome {
+  color: var(--primary);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 1em;
+  /* padding: auto; */
+  /* font-family: monospace; */
+}
+
+.navTitle:hover{
+  transform: scale(1.1);
 }
 
 .footer {
@@ -96,8 +102,7 @@ h6 {
 .main {
   color: var(--secondary);
   background-color: var(--primary);
-  min-height: 74vh;
-  /* width: 95vw; */
+  min-height: 72vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,7 +117,7 @@ h6 {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-items: center
+  align-items: center;
 }
 
 .text {
@@ -129,9 +134,99 @@ h6 {
   background-size: cover;
 }
 
+/* ABOUT */
+
+.abtPhoto {
+  max-width: 600px;
+  max-height: 40%;
+  border-radius: 100%;
+}
+/* RECORDINGS all inline */
+
+/* EVENTS */
+
+tr,
+td,
+th {
+  padding: 0.5rem;
+  font-family: "Fira Code", monospace;
+}
+
+tr {
+  text-align: left;
+}
+
+tr:nth-of-type(odd) {
+  background: var(--darker-primary);
+}
+
+@media only screen and (max-width: 600px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  /* (min-device-width: 768px) and (max-device-width: 1024px)  */
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  td:nth-of-type(1):before {
+    content: "who";
+  }
+  td:nth-of-type(2):before {
+    content: "date";
+  }
+  td:nth-of-type(3):before {
+    content: "where";
+  }
+  td:nth-of-type(4):before {
+    content: "when";
+  }
+}
+
+/* VIDEOS */
+iframe {
+  margin: 2em;
+}
+
+/* RESPONSIVE */
 @media only screen and (max-width: 767px) {
   .navTitle {
     display: none;
+  }
+  .bgimg-1 {
+    background-image: url("./components/assets/Masthead2.png");
   }
   /* .mainDiv{
     margin-left: 1%;
@@ -145,15 +240,15 @@ h6 {
   }
 }
 
-.pt{
+.pt {
   padding-top: 5%;
 }
-.pr{
+.pr {
   padding-right: 5%;
 }
-.pb{
+.pb {
   padding-bottom: 5%;
 }
-.pl{
+.pl {
   padding-left: 5%;
 }

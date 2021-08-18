@@ -12,9 +12,11 @@ const Home = () => {
       <Jumbotron fluid>
         <Container fluid className="bgimg-1" style={{display: 'flex', flexFlow: 'row wrap', alignItems: 'center', justifyContent: 'center'}}>
           <div className="titleWrapper">
-            <div className="navTitle">
-              <h1>NICK TUCKER</h1>
-              <h3>bassist · composer</h3>
+            <div className="navTitleHome">
+              
+                <h1> NICK TUCKER </h1>
+                <h3>bassist · composer</h3>
+              
             </div>
           </div>
         </Container>
