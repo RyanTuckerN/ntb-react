@@ -1,4 +1,4 @@
-import React, { useState, useLocation } from "react"
+import React, { useState, useEffect } from "react"
 import { Route, Link, Switch, NavLink } from "react-router-dom"
 import {
   Collapse,
@@ -17,14 +17,32 @@ import Videos from "./pages/Videos"
 import Contact from "./pages/Contact"
 
 const NavbarComponent = (props) => {
-  const location = useLocation
-  const [isOpen, setIsOpen] = useState(false)
-  const [homeActive, setHomeActive] = useState(true)
+  // const location = useLocation
+  const [isOpen, setIsOpen] = useState(false) 
+  const [homeActive, setHomeActive] = useState(false)
 
   const activeStyle = { color: "var(--light)", fontSize: "1.2em" }
 
   const toggle = () => setIsOpen(!isOpen)
+  const closeMenu = () => setIsOpen(false)
   const homeInactive = () => setHomeActive(false)
+
+  // useEffect(() => {
+  //   // document.addEventListener('click', e=>console.log(e))
+
+  //   document.addEventListener('click', (e)=>{
+  //     if(isOpen===true && !e.target.classList.contains('navbar-toggler')){
+  //       closeMenu()
+  //     }
+  //   })
+  //   return () => {
+  //     document.removeEventListener('click', (e)=>{
+  //       if(isOpen===true && !e.target.classList.contains('navbar-toggler')){
+  //         closeMenu()
+  //       }
+  //     })
+  //   }
+  // }, [isOpen])
 
   return (
     <div className="navWrapper">
@@ -36,7 +54,9 @@ const NavbarComponent = (props) => {
             <NavItem>
               <NavLink
                 to="/"
+                // activeStyle={activeStyle}
                 onClick={() => setHomeActive(true)}
+                onClick={closeMenu}
                 style={homeActive ? activeStyle : null}
               >
                 <strong>Home</strong>
@@ -46,6 +66,7 @@ const NavbarComponent = (props) => {
               <NavLink
                 to="/about"
                 onClick={homeInactive}
+                onClick={closeMenu}
                 activeStyle={activeStyle}
               >
                 <b>
@@ -57,6 +78,7 @@ const NavbarComponent = (props) => {
               <NavLink
                 to="/calendar"
                 onClick={homeInactive}
+                onClick={closeMenu}
                 activeStyle={activeStyle}
               >
                 <strong>Calendar</strong>
@@ -65,7 +87,11 @@ const NavbarComponent = (props) => {
             {homeActive ? null : (
               <NavbarBrand className="navBrand">
                 <Link to="/">
-                  <div className="navTitle" onClick={() => setHomeActive(true)}>
+                  <div 
+                  className="navTitle"
+                  onClick={() => setHomeActive(true)}
+                  onClick={closeMenu}
+                  >
                     <h3>NICK TUCKER</h3>
                     <h6>bassist · composer</h6>
                   </div>
@@ -76,6 +102,7 @@ const NavbarComponent = (props) => {
               <NavLink
                 to="/recordings"
                 onClick={homeInactive}
+                onClick={closeMenu}
                 activeStyle={activeStyle}
               >
                 <strong>Recordings</strong>
@@ -85,6 +112,7 @@ const NavbarComponent = (props) => {
               <NavLink
                 to="/videos"
                 onClick={homeInactive}
+                onClick={closeMenu}
                 activeStyle={activeStyle}
               >
                 <strong>Videos</strong>
@@ -94,6 +122,7 @@ const NavbarComponent = (props) => {
               <NavLink
                 to="/contact"
                 onClick={homeInactive}
+                onClick={closeMenu}
                 activeStyle={activeStyle}
               >
                 <strong>Contact</strong>

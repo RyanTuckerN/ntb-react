@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Footer = (props) => {
-let width = window.innerWidth
-// console.log(width)
-    {return window.innerWidth > 768  ?
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(()=>{
+    window.addEventListener('resize', ()=>setWidth(window.innerWidth))
+    return window.removeEventListener('resize', ()=>setWidth(window.innerWidth))
+  }, [])
+
+  // console.log(width)
+    {return width > 768  ?
     (<div className="footer">
       <div>Copyright &copy; 2021 Nick Tucker </div> <div> Bassist · Composer </div>  All Rights Reserved
     </div>)
@@ -14,4 +20,4 @@ let width = window.innerWidth
    
 }
  
-export default Footer;
+export default Footer;  

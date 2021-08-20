@@ -72,8 +72,11 @@ const NappyHead = new Recording(
   'Nappy Head', 2016, 'Clint Breeze', 'https://fromthegroundupmusic.bandcamp.com/album/clint-breeze-nappy-head', 'https://f4.bcbits.com/img/a3652121452_16.jpg'
 )
 
-const recordings = [TwoParts, WriitingPrompts, Nine, SpaceOcean, EndtimeOverture, Arrival, JazzOnCanvas, ThreeMuses, DayOne, NappyHead]
+const MiM = new Recording('MiM', 2019, 'Frank Glover', 'https://frankglover.bandcamp.com/album/mim', 'https://f4.bcbits.com/img/a3932902542_16.jpg')
+const FutureClef = new Recording('Symphony No. 1 (Futureclef)', 2020, 'Frank Glover', 'https://frankglover.bandcamp.com/album/symphony-no-1-futureclef-soundtrack', 'https://f4.bcbits.com/img/a2282971089_16.jpg')
 
-console.log(recordings)
+const recordings = [TwoParts, WriitingPrompts, Nine, SpaceOcean, EndtimeOverture, Arrival, JazzOnCanvas, ThreeMuses, DayOne, NappyHead, MiM, FutureClef]
+
+// console.log(recordings)
 
 export default recordings
