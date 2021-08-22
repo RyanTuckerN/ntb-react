@@ -11,11 +11,11 @@ const Footer = (props) => {
   // console.log(width)
     {return width > 768  ?
     (<div className="footer">
-      <div>Copyright &copy; 2021 Nick Tucker </div> <div> Bassist · Composer </div>  All Rights Reserved
+      <div>Copyright &copy; {new Date().getUTCFullYear()} Nick Tucker </div> <div> Bassist · Composer </div>  All Rights Reserved
     </div>)
       :
     (<div className="footer">
-      <div>Nick Tucker 🎵 Bassist </div>
+      <div>Copyright &copy; {new Date().getUTCFullYear()} Nick Tucker</div>
     </div>)}
    
 }

@@ -35,7 +35,6 @@ html {
   font-family: "Fira Sans", sans-serif;
   overflow-x: hidden;
   box-sizing: border-box;
-  /* border-radius: 10px; */
 }
 
 .App {
@@ -161,7 +160,10 @@ h6 {
   border-radius: 100%;
 }
 /* RECORDINGS  */
-
+#recordCard:hover {
+  transform: scale(1.05);
+  filter: saturate(2);
+}
 
 /* EVENTS */
 
@@ -178,6 +180,16 @@ tr {
 
 tr:nth-of-type(odd) {
   background: var(--darker-primary);
+}
+
+.carousel-item > img { 
+  background-image: url("./components/assets/Masthead.png");
+  min-height: 60%;
+  position: relative;
+  opacity: 0.85;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media only screen and (max-width: 600px) {
@@ -249,6 +261,12 @@ tr:nth-of-type(odd) {
 /* VIDEOS */
 iframe {
   margin: 2em;
+
+}
+iframe:hover{
+  transform: scale(1.015);
+  filter: saturate(1.2);
+  border: solid var(--transparent-bg) 10px;
 }
 
 /* RESPONSIVE */

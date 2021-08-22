@@ -16,7 +16,7 @@ const Calendar = ( ) => {
           </thead>
           <tbody>
             <TableRow who='Clint Breeze and the Groove' date='8.20.21' where='State Street Pub' time='doors 8p' />
-            <TableRow who='Tucker Brothers' date='8.25.21' where='Chatterbox' time='8-11p' />
+            {/* <TableRow who='Tucker Brothers' date='8.25.21' where='Chatterbox' time='8-11p' /> */}
             <TableRow who='John Raymond' date='8.27.21' where='Jazz Kitchen' time='7p and 9:30p' />
             <TableRow who='Tucker Brothers' date='8.28.21' where='Ouibache Music Fest' time='7:45p' />
             <TableRow who='The Shed' date='9.1.21' where='Jazz Kitchen' time='9-midnight' />

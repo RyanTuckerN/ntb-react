@@ -38,44 +38,77 @@ const SpaceOcean = new Recording(
   "https://f4.bcbits.com/img/a1212299151_16.jpg"
 )
 const EndtimeOverture = new Recording(
-  'Endtime Overture',
+  "Endtime Overture",
   2020,
-  'Clint Breeze and the Groove',
-  'https://clintbreeze.bandcamp.com/album/endtime-overture',
-  'https://f4.bcbits.com/img/a2159801753_16.jpg'
+  "Clint Breeze and the Groove",
+  "https://clintbreeze.bandcamp.com/album/endtime-overture",
+  "https://f4.bcbits.com/img/a2159801753_16.jpg"
 )
 const Arrival = new Recording(
-  'Arrival',
+  "Arrival",
   2019,
-  'Clint Breeze and the Groove',
-  'https://clintbreeze.bandcamp.com/album/arrival', 
-  'https://f4.bcbits.com/img/a1867655297_16.jpg'
+  "Clint Breeze and the Groove",
+  "https://clintbreeze.bandcamp.com/album/arrival",
+  "https://f4.bcbits.com/img/a1867655297_16.jpg"
 )
 const JazzOnCanvas = new Recording(
-  'Jazz on Canvas',
+  "Jazz on Canvas",
   2015,
-  'Indianapolis Jazz Collective',
-  'https://www.allmusic.com/album/jazz-on-canvas-mw0002879982?1629210339857',
-  'https://images-na.ssl-images-amazon.com/images/I/81D%2BRxjqnwL._SL1425_.jpg'
+  "Indianapolis Jazz Collective",
+  "https://www.allmusic.com/album/jazz-on-canvas-mw0002879982?1629210339857",
+  "https://images-na.ssl-images-amazon.com/images/I/81D%2BRxjqnwL._SL1425_.jpg"
 )
 const ThreeMuses = new Recording(
-  'Three Muses',
+  "Three Muses",
   2015,
-  'Sophie Faught',
-  'https://sophiefaught.bandcamp.com/album/three-muses',
-  'https://f4.bcbits.com/img/a1275293635_16.jpg'
+  "Sophie Faught",
+  "https://sophiefaught.bandcamp.com/album/three-muses",
+  "https://f4.bcbits.com/img/a1275293635_16.jpg"
 )
 const DayOne = new Recording(
-  'Day One', 2013, 'Sophie Faught', 'https://sophiefaught.bandcamp.com/album/day-one', 'https://f4.bcbits.com/img/a2465219673_16.jpg'
+  "Day One",
+  2013,
+  "Sophie Faught",
+  "https://sophiefaught.bandcamp.com/album/day-one",
+  "https://f4.bcbits.com/img/a2465219673_16.jpg"
 )
 const NappyHead = new Recording(
-  'Nappy Head', 2016, 'Clint Breeze', 'https://fromthegroundupmusic.bandcamp.com/album/clint-breeze-nappy-head', 'https://f4.bcbits.com/img/a3652121452_16.jpg'
+  "Nappy Head",
+  2016,
+  "Clint Breeze",
+  "https://fromthegroundupmusic.bandcamp.com/album/clint-breeze-nappy-head",
+  "https://f4.bcbits.com/img/a3652121452_16.jpg"
 )
 
-const MiM = new Recording('MiM', 2019, 'Frank Glover', 'https://frankglover.bandcamp.com/album/mim', 'https://f4.bcbits.com/img/a3932902542_16.jpg')
-const FutureClef = new Recording('Symphony No. 1 (Futureclef)', 2020, 'Frank Glover', 'https://frankglover.bandcamp.com/album/symphony-no-1-futureclef-soundtrack', 'https://f4.bcbits.com/img/a2282971089_16.jpg')
+const MiM = new Recording(
+  "MiM",
+  2019,
+  "Frank Glover",
+  "https://frankglover.bandcamp.com/album/mim",
+  "https://f4.bcbits.com/img/a3932902542_16.jpg"
+)
+const FutureClef = new Recording(
+  "Symphony No. 1 (Futureclef)",
+  2020,
+  "Frank Glover",
+  "https://frankglover.bandcamp.com/album/symphony-no-1-futureclef-soundtrack",
+  "https://f4.bcbits.com/img/a2282971089_16.jpg"
+)
 
-const recordings = [TwoParts, WriitingPrompts, Nine, SpaceOcean, EndtimeOverture, Arrival, JazzOnCanvas, ThreeMuses, DayOne, NappyHead, MiM, FutureClef]
+const recordings = [
+  TwoParts,
+  WriitingPrompts,
+  Nine,
+  SpaceOcean,
+  EndtimeOverture,
+  Arrival,
+  JazzOnCanvas,
+  ThreeMuses,
+  DayOne,
+  NappyHead,
+  MiM,
+  FutureClef,
+]
 
 // console.log(recordings)
 
